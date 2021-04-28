@@ -1,19 +1,24 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3% 15%;
+    padding: 10% 15%;
     background-color: rgb(93, 90, 90);
+    min-height: 100vh;
+    position: relative;
 }
 
 .container{
+    width: 80vw;
     position: relative;
+    margin: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -26,7 +31,7 @@ body{
 }
 
 h1{
-    font-size: 7rem;
+    font-size: 5rem;
     color: #4CCCA3;
     font-family: 'Lobster',cursive;
     margin: 30px;
@@ -49,6 +54,11 @@ h1{
     width: 110px;
 }
 
+.dice-roll{
+    transform: rotate(1440deg);
+}
+
+
 .name{
     font-family: 'Indie Flower', cursive;
     font-size: 1.5rem;
@@ -67,15 +77,6 @@ button{
     box-shadow: 5px 5px 5px black;
 }
 
-/* .button::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: 5px 5px 5px black;
-} */
 
 button:hover{
     background-color: #47bb96;
@@ -95,10 +96,33 @@ button:active{
     margin-left: -50px;
 }
 
-.dice{
-    transition: all ease 5s;
-}
 
-.dice-roll{
-    transform: rotate(1440deg);
-}
+footer{
+    display: block;
+    margin: 20px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0px;
+  }
+  
+  footer a{
+    text-decoration: none;
+    color: rgb(21, 202, 202);
+    padding: 10px;
+  }
+  
+  footer a:hover{
+    background-color: hsl(204, 26%, 40%);
+    color: white;
+    box-shadow: 3px 3px 5px white;
+  }
+
+  @media screen and (max-width:480px) {
+            h1{
+                font-size: 20vw;
+            }
+            .dice{
+                width: 20vw;
+            }
+      
+  }
