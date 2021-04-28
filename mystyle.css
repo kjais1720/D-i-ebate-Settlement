@@ -52,6 +52,8 @@ h1{
 
 .dice{
     width: 110px;
+    transition: transform ease 5s;
+
 }
 
 .dice-roll{
